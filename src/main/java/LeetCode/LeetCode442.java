@@ -1,9 +1,6 @@
 package LeetCode;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**     Find All Duplicates in an Array
  * Given an array of integers, 1 ≤ a[i] ≤ n (n = size of array),
@@ -31,5 +28,6 @@ public class LeetCode442 {
         for(int i:ans){
             System.out.println(i);
         }
+        Set<Integer> s = new HashSet<>();
     }
 }
