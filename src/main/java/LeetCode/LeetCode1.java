@@ -1,6 +1,8 @@
 package LeetCode;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -23,11 +25,16 @@ public class LeetCode1 {
     }
 
     public static void main(String[] args) {
-        int i;
-        for(i = 0;i<10;i++){
-
+        int[] i = new int[5];
+//        for(i = 0;i<10;i++){
+//
+//        }
+//        int x =i;
+        for(int l:i) {
+            System.out.println(l);
         }
-        int x =i;
-        System.out.println(x);
+
+        List<List<String>> r = new ArrayList<>();
+
     }
 }
