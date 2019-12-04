@@ -16,6 +16,7 @@ public class StreamPractice {
         arr[5] = new Employee(6,"Jinmu",22,33000);
 
         Arrays.sort(arr,salaryCom);
+//        args[1].trim
         System.out.println(Arrays.toString(arr));
 //        for(Employee i:arr){
 //            System.out.println(i);

@@ -10,6 +10,10 @@ import java.util.stream.Stream;
 public class ComparatorTest {
     public static Comparator<Employee> SalaryComparator = (e1, e2) -> (int) (e1.getSalary() - e2.getSalary());
 
+    public static Comparator<Employee> idComparator = Comparator.comparingInt(Employee::getId);
+
+    public static Comparator<Employee> nameComparator = Comparator.comparing(Employee::getName);
+
     public static void main(String[] args) {
         Employee[] emArr = new Employee[4];
         emArr[1] = new Employee(17, "Wu", 21, 19000);
@@ -17,9 +21,20 @@ public class ComparatorTest {
         emArr[3] = new Employee(21, "Xu", 21, 10900);
         emArr[0] = new Employee(10, "Wang", 25, 10000);
 
-
-//        Arrays.sort(emArr,SalaryComparator);
-//        System.out.println("Default Sorting of Employee list:\n" + Arrays.toString(emArr));
+//        Comparator nameComparator = new Comparator() {
+//            @Override
+//            public int compare(Object o1, Object o2) {
+//                return 0;
+//            }
+//        }
+//        Comparable<Employee> idCom = new Comparable<Employee>() {
+//            @Override
+//            public int compareTo(Employee o) {
+//                return (this.getId()-o.getId());
+//            }
+//        }
+        Arrays.sort(emArr,nameComparator);
+        System.out.println("Default Sorting of Employee list:\n" + Arrays.toString(emArr));
 
 //        Arrays.sort(emArr, SalaryComparator);
 //        System.out.println("Comparation by Salary:\n" + Arrays.toString(emArr));
@@ -42,8 +57,8 @@ public class ComparatorTest {
                 .limit(2)               //only select the first n element of collection
                 .skip(1)                //skip the first n elements in the collection
                 .collect(Collectors.toList());
-        for(Integer i : intList){
-            System.out.println(i);
-        }
+//        for(Integer i : intList){
+//            System.out.println(i);
+//        }
     }
 }

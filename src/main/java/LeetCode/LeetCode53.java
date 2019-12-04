@@ -20,6 +20,8 @@ public class LeetCode53 {
 
     public static void main(String[] args) {
         int[] s = {-1,2,3,-4,-7,12};
+        String l = "dasfsdfa";
+//        l.charAt(2).;
         System.out.println(maxSubArray(s));
     }
 }
