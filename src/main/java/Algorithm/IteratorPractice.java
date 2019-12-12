@@ -3,7 +3,7 @@ package Algorithm;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IteratorPractice {
+public class IteratorPractice implements Cloneable {
     public static void main(String[] args) {
         List<String> str = new ArrayList<>();
         str.add("Ping");
