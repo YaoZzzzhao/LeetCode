@@ -1,9 +1,6 @@
 package Algorithm;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -14,12 +11,20 @@ public class ComparatorTest {
 
     public static Comparator<Employee> nameComparator = Comparator.comparing(Employee::getName);
 
+    public Comparator<String> stringComparator2 =(e1,e2) -> e1.compareTo(e2);
+
     public static void main(String[] args) {
         Employee[] emArr = new Employee[4];
         emArr[1] = new Employee(17, "Wu", 21, 19000);
         emArr[2] = new Employee(18, "Gu", 28, 11000);
         emArr[3] = new Employee(21, "Xu", 21, 10900);
         emArr[0] = new Employee(10, "Wang", 25, 10000);
+
+        List<String> list = new ArrayList<>();
+        list.add("hello");
+        list.add("abnormal");
+        list.add("world");
+        list.add("price");
 
 //        Comparator nameComparator = new Comparator() {
 //            @Override
@@ -33,8 +38,9 @@ public class ComparatorTest {
 //                return (this.getId()-o.getId());
 //            }
 //        }
-        Arrays.sort(emArr,nameComparator);
-        System.out.println("Default Sorting of Employee list:\n" + Arrays.toString(emArr));
+        ComparatorTest ct = new ComparatorTest();
+        Collections.sort(list,ct.stringComparator2);
+        System.out.println("Default Sorting of Employee list:\n" + list);
 
 //        Arrays.sort(emArr, SalaryComparator);
 //        System.out.println("Comparation by Salary:\n" + Arrays.toString(emArr));

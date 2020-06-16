@@ -37,8 +37,8 @@ public class StreamPractice {
         map2.forEach((key,value)->System.out.println(key+":"+value));
 
         // 2. using entryset
-        for(Map.Entry<String,String> entry:map2.entrySet()){
-            System.out.println(entry.getKey()+" : "+entry.getValue());
-        }
+//        for(Map.Entry<String,String> entry:map2.entrySet()){
+//            System.out.println(entry.getKey()+" : "+entry.getValue());
+//        }
     }
 }
